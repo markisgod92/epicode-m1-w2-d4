@@ -36,7 +36,6 @@ header {
     width: 100%;
     height: 70px;
     padding: 0 200px;
-    border: 2px solid red;              /*DA RIMUOVERE */
 }
 
 .logo {
@@ -85,18 +84,12 @@ nav {
 
 .left-side {
     flex: 2;
-    border-right: 1px solid grey;              /*DA RIMUOVERE */
     padding: 50px 50px 0px 200px;
 }
 
 .right-side {
     flex: 1;
     padding: 50px 200px 0px 50px;
-}
-
-
-.articles {
-    border: 2px solid blue;                     /*DA RIMUOVERE */
 }
 
 .sidebar {
@@ -115,7 +108,7 @@ nav {
     border-bottom: 1px solid grey;
 }
 
-.menu h3:nth-child(2) {
+.menu span:nth-child(2) {
     padding-bottom: 10px;
     border-bottom: 2px solid black;
 }
@@ -123,38 +116,70 @@ nav {
 .articles > article {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     gap:20px;
     padding-top: 40px;
-    border: 2px solid purple;                   /*DA RIMUOVERE */
 }
 
 .data {
+    flex: 3;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-between;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.author img {
+    width: 30px;
+    height: 30;
+}
+
+article p {
+    color: grey;
 }
 
 .article-footer {
     display: flex;
-    width: 100%;
     justify-content: space-between;
 }
 
 .article-footer ul {
     display: flex;
-    gap: 20px;
-    list-style: none;
+    align-items: center;
+    gap: 30px;
     color: grey;
 }
 
+.article-footer ul li:nth-child(1) {
+    list-style: none;
+}
+
+.article-footer ul li:nth-child(3) {
+    background-color: lightgrey;
+    padding: 5px 10px;
+    border-radius: 30px;
+} 
+
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .article-image {
-    height: 100%;
+    flex: 2;
 }
 
 .article-image img {
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
