@@ -1,3 +1,18 @@
+/*
+
+10/05/2024
+
+Risorse esterne:
+- picsum
+- fontawesome
+- ionicons
+- flaticon
+- fake name generator
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,16 +23,20 @@ ion-icon {
     color: grey;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 
 /* HEADER */
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 70px;
     padding: 0 200px;
-    border: 2px solid red;
+    border: 2px solid red;              /*DA RIMUOVERE */
 }
 
 .logo {
@@ -30,14 +49,16 @@ nav {
     object-fit: cover;
 }
 
-.navbar {
+nav {
     display: flex;
     justify-content:space-between;
     align-items: center;
     gap: 10px;
 }
 
-.resume-membership {
+.resume-membership,
+.twitter,
+.follow-button {
     border: 1px solid grey;
     border-radius: 30px;
     padding: 5px 20px;
@@ -63,28 +84,31 @@ nav {
 }
 
 .left-side {
-    width: 60%;
-    border-right: 1px solid grey;
+    flex: 2;
+    border-right: 1px solid grey;              /*DA RIMUOVERE */
     padding: 50px 50px 0px 200px;
 }
 
 .right-side {
+    flex: 1;
     padding: 50px 200px 0px 50px;
 }
 
 
 .articles {
-    border: 2px solid blue;
+    border: 2px solid blue;                     /*DA RIMUOVERE */
 }
 
 .sidebar {
-    border: 2px solid blue;
+    border: 2px solid blue;                     /*DA RIMUOVERE */
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 60px;
 }
 
 
-/* SEZIONE ARTICOLI*/
+/* LEFT SIDE */
 .menu {
     display: flex;
     gap: 50px;
@@ -96,13 +120,13 @@ nav {
     border-bottom: 2px solid black;
 }
 
-article {
+.articles > article {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap:20px;
     padding-top: 40px;
-    border: 2px solid purple;
+    border: 2px solid purple;                   /*DA RIMUOVERE */
 }
 
 .data {
@@ -125,6 +149,99 @@ article {
     color: grey;
 }
 
+.article-image {
+    height: 100%;
+}
+
 .article-image img {
     object-fit:cover;
+}
+
+
+/* RIGHT SIDE */
+
+/* TWITTER */
+.twitter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.fa-twitter {
+    color: lightskyblue;
+}
+
+/* RECOMMENDED TOPICS */
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.topic {
+    background-color: lightgrey;
+    border-radius: 30px;
+    padding: 5px 20px;
+}
+
+/* WHO TO FOLLOW */
+.follow-container {
+    display: flex; 
+    flex-direction:column;
+}
+
+.follow-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.follow-profile {
+    display: flex;
+    align-items: top;
+    gap: 30px;
+}
+
+.follow-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+}
+
+.follow-picture img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.follow-data {
+    display: flex;
+    flex-direction: column;
+}
+
+/* RECENTLY SAVED */
+.saved-container > article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap:20px;
+    border: 2px solid purple;                   /*DA RIMUOVERE */
+}
+
+/* FOOTER */
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: grey;
 }
